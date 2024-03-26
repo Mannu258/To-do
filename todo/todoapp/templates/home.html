@@ -40,6 +40,7 @@
           <tr>
             <th scope="col">Role</th>
             <th scope="col">Tasks</th>
+            <th scope="col">Status</th>
           </tr>
           {%for task in task%}
         </thead>
@@ -47,6 +48,8 @@
           <tr>
             <th scope="row">{{forloop.counter}}</th>
             <td>{{task.title}}</td>
+            <td>{{task.complete}}</td>
+
             <td><a class="btn btn-primary" href="{% url 'update_task' task.id %}">Update</a></td>
             <td><a class="btn btn-primary" href="{% url 'remove' task.id %}">Delete</a></td>
     
